@@ -14,8 +14,8 @@ const Home = () => {
           </div>
           <div className="col-12 col-md-6 d-flex justify-content-center align-items-center">
             <div className="w-75">
-              <h1>Hello-Foods</h1>
-              <p>
+              <h1 className="text-info">Hello-Foods</h1>
+              <p className="fw-bold text-muted">
                 This is a food delivery website. This is a food delivery
                 website. This is a food delivery website. This is a food
                 delivery website.
