@@ -1,17 +1,12 @@
 [
     {
         "id": 1,
-        "question": "Question 1",
-        "answer": "Ans 1"
+        "question": "What is context api?",
+        "answer": "Context api is a way to pass data through the component tree without having to pass props. Props drilling is one of the major problem in react. If we pass data in child components we need to pass data using props and it's working on component tree. But in context api we don't need to pass data using props. Just create a context and use it anywhere of whole website by using useContext() hook."
     },
     {
         "id": 2,
-        "question": "Question 2",
-        "answer": "Ans 2"
-    },
-    {
-        "id": 3,
-        "question": "Question 3",
-        "answer": "Ans 3"
+        "question": "What are semantic elements?",
+        "answer": "Semantic elements are those that clearly describe their meaning in a human and machine-readable way. Semantic elements have meaningful name that makes easier to write code and understand it. Some semantic elements are : <article>, <aside>, <header>, <main>, <footer>, <nav>, <figure>, <section> and soo on..."
     }
 ]
