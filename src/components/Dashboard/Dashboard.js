@@ -5,6 +5,13 @@ import {
   CartesianGrid,
   Line,
   LineChart,
+  Pie,
+  PieChart,
+  PolarAngleAxis,
+  PolarGrid,
+  PolarRadiusAxis,
+  Radar,
+  RadarChart,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -70,6 +77,39 @@ const Dashboard = () => {
               <YAxis />
               <Tooltip />
             </BarChart>
+          </ResponsiveContainer>
+        </div>
+      </div>
+      <div className="row mt-5">
+        <div className="col-12 col-md-6">
+          <ResponsiveContainer width={"100%"} height={300}>
+            <PieChart width={400} height={400}>
+              <Pie
+                data={data}
+                dataKey="revenue"
+                cx="50%"
+                cy="50%"
+                outerRadius={"100%"}
+                fill="#0dcaf0"
+                label
+              />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="col-12 col-md-6">
+          <ResponsiveContainer width="100%" height="100%">
+            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
+              <PolarGrid />
+              <PolarAngleAxis dataKey="month" />
+              <PolarRadiusAxis />
+              <Radar
+                name="Mike"
+                dataKey="revenue"
+                stroke="#8884d8"
+                fill="#8884d8"
+                fillOpacity={0.6}
+              />
+            </RadarChart>
           </ResponsiveContainer>
         </div>
       </div>
