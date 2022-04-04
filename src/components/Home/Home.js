@@ -1,6 +1,11 @@
 import React from "react";
+import useReviews from "../../hooks/useReviews";
+import Review from "../Review/Review";
 
 const Home = () => {
+  const [reviews, setReviews] = useReviews();
+  const threeReviews = reviews.slice(0, 3);
+
   return (
     <div className="container mt-5">
       <section>
@@ -23,6 +28,17 @@ const Home = () => {
               <button className="btn btn-info">Learn More</button>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="my-5">
+        <h3 className="text-center pt-5 pb-2">
+          Customer Reviews{" "}
+          <span className="badge bg-info">{threeReviews.length}</span>
+        </h3>
+        <div class="mt-5 row row-cols-1 row-cols-md-3 g-4">
+          {threeReviews.map((review) => (
+            <Review key={review.id} review={review}></Review>
+          ))}
         </div>
       </section>
     </div>
