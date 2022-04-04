@@ -60,6 +60,7 @@ const Dashboard = () => {
   return (
     <div className="container mt-5">
       <div className="row">
+        <h1 className="text-center mb-5">Line and Bar Chart</h1>
         <div className="col-12 col-md-6">
           <LineChart width={500} height={500} data={data}>
             <Line type="monotone" dataKey="revenue" stroke="#8884d8"></Line>
@@ -70,7 +71,7 @@ const Dashboard = () => {
           </LineChart>
         </div>
         <div className="col-12 col-md-6">
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%">
             <BarChart width={150} height={40} data={data}>
               <Bar dataKey="revenue" fill="#8884d8" />
               <XAxis dataKey="month" />
@@ -81,6 +82,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="row mt-5">
+        <h1 className="text-center my-5">Pie and Radar Chart</h1>
         <div className="col-12 col-md-6">
           <ResponsiveContainer width={"100%"} height={300}>
             <PieChart width={400} height={400}>
