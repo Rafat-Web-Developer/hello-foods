@@ -13,7 +13,7 @@ const Blogs = () => {
   return (
     <div className="container mt-5">
       {questions.map((question) => (
-        <Question singleQuestion={question}></Question>
+        <Question key={question.id} singleQuestion={question}></Question>
       ))}
     </div>
   );

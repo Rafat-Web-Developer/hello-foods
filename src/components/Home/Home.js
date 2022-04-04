@@ -6,6 +6,7 @@ import Review from "../Review/Review";
 const Home = () => {
   const [reviews, setReviews] = useReviews();
   const navigate = useNavigate();
+
   const threeReviews = reviews.slice(0, 3);
 
   const handleShowAllReviewsButton = () => {
@@ -27,11 +28,10 @@ const Home = () => {
             <div className="w-75">
               <h1 className="text-info">Hello-Foods</h1>
               <p className="fw-bold text-muted">
-                This is a food delivery website. This is a food delivery
-                website. This is a food delivery website. This is a food
-                delivery website.
+                Assalamualaikom. Welcome to our food delivery site. Choose your
+                best food and order it.
               </p>
-              <button className="btn btn-info">Learn More</button>
+              <button className="btn btn-info">Live Demo</button>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Home = () => {
           Customer Reviews{" "}
           <span className="badge bg-info">{threeReviews.length}</span>
         </h3>
-        <div class="mt-5 row row-cols-1 row-cols-md-3 g-4">
+        <div className="mt-5 row row-cols-1 row-cols-md-3 g-4">
           {threeReviews.map((review) => (
             <Review key={review.id} review={review}></Review>
           ))}
