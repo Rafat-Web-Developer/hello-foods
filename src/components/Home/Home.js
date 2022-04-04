@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useReviews from "../../hooks/useReviews";
 import Review from "../Review/Review";
 
 const Home = () => {
   const [reviews, setReviews] = useReviews();
+  const navigate = useNavigate();
   const threeReviews = reviews.slice(0, 3);
+
+  const handleShowAllReviewsButton = () => {
+    navigate("/reviews");
+  };
 
   return (
     <div className="container mt-5">
@@ -39,6 +45,11 @@ const Home = () => {
           {threeReviews.map((review) => (
             <Review key={review.id} review={review}></Review>
           ))}
+        </div>
+        <div className="text-center my-5">
+          <button className="btn btn-info" onClick={handleShowAllReviewsButton}>
+            Show All Reviews
+          </button>
         </div>
       </section>
     </div>
